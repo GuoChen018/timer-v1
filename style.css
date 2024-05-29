@@ -1,0 +1,97 @@
+:root {
+    /* h6, caption  */
+    --font-size-small: clamp(0.813rem, 0.063vw + 0.8rem, 0.875rem);
+
+    /* paragraph  */
+    --font-size-medium: 1rem;
+
+    /* h3 */
+    --font-size-large: clamp(1rem, 0.25vw + 1rem, 1.25rem);
+
+    /* h2 */
+    --font-size-xlarge: clamp(1.25rem, 0.5vw + 1.15rem, 1.75rem);
+
+    /* h1 */
+    --font-size-xxlarge: clamp(3.75rem, 6.25vw + 2.5rem, 10rem);
+
+    --border: #EFEFEF;
+    --black: #121212; 
+}
+
+/* * {
+    border: 1px solid red;
+} */
+
+/* Hosting the font files on your server */
+@font-face {
+    font-family: 'CommitMono';
+    src: url('fonts/fonts/CommitMono-400-Regular.otf') format('otf'),
+         url('fonts/fonts/CommitMono-700-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+body {
+    margin: 0; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+body, button {
+    font-family: 'CommitMono', sans-serif;
+    color: #121212;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: clamp(10vw, calc(20vw + 20rem), 90vw);
+    height: 100vh;
+    row-gap: 1.25rem;
+}
+
+#controls {
+    display: flex; 
+    width: 100%;
+    gap: 1rem;
+}
+
+
+#controls > button {
+    flex-grow: 1; 
+}
+
+h1 {
+    font-size: var(--font-size-xxlarge);
+    margin: 0;
+}
+
+ul {
+    list-style-type: none; /* Removes bullets from lists */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    font-size: var(--font-size-medium);
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    background-color: white;
+    border-radius: 0.5rem;
+    transition: ease-in;
+    cursor: pointer; /* Add this line to set the default cursor */
+}
+
+button:hover {
+    background-color: #F7F7F8;
+    cursor: pointer; /* Add this line to set the default cursor */
+}
+
+
+
